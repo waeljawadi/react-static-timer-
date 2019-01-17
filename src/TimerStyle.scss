@@ -1,13 +1,13 @@
-.verybold
-{
+.verybold {
     font-weight: 600;
     font-size: 4em;
     position: relative;
 }
-.thinner
-{
+
+.thinner {
     display: block
 }
+
 .verybold::after {
     position: absolute;
     font-size: 13px;
@@ -16,15 +16,17 @@
     left: 0;
     color: lightgray;
 }
-.verybold.one::after 
-{
-    content: "Hour"
-}
-.verybold.two::after 
-{
-    content: "Minute"
-}
-.verybold.three::after 
-{
-    content: "Seconde"
-}
+.verybold.one
+{&::after {
+    content: "Hour";
+  }}
+  
+  .verybold.two
+ { &::after {
+    content: "Minute";
+  }}
+  
+  .verybold.three
+  {&::after {
+    content: "Seconde";
+  }}
